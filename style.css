@@ -10,6 +10,7 @@ img {
 
 .header {
     height: 150px;
+    background-color: aqua;
 }
 
 button.btn-cart {
@@ -47,4 +48,14 @@ button.by-btn {
     align-items: flex-end;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.product-item {
+    height: 400px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+    background-color: darkturquoise;
 }
