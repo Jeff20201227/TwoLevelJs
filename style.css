@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+img {
+    width: 350px;
+}
+
+.header {
+    height: 150px;
+}
+
+button.btn-cart {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 25px;
+    color: black;
+}
+
+h3 {
+    margin-left: 115px;
+    padding-bottom: 25px;
+}
+
+p {
+    margin-left: 120px;
+    padding-top: 25px;
+}
+
+button.by-btn {
+    margin-left: 85px;
+    margin-top: 25px;
+    padding: 6px;
+}
+
+.products {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 50px;
+    padding-right: 50px;
+}
