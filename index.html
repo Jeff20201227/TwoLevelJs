@@ -1,19 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Интернет-магазин</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-    <div class="logo">Интернет-магазин</div>
-    <button class="btn-cart" type="button" data-id="1234">Корзина</button>
-</header>
-<main>
-    <div class="products"></div>
-</main>
-<script src="./js/main.js"></script>
+    <div class="wrapper">
+        <div class="top">
+            <header class="header center">
+                <div class="header_left">
+                    <a class="logo" href="index.html"><img class="logo_img" src="img/logo.png" alt="logo"><span
+                            class="Log1">BRAN</span><span class="Log2">D</span></a>
+                </div>
+                <div class="header_search">
+                    <form class="header_form" action="#">
+                        <div>
+                            <ul class="menu2">
+                                <li class="menu_list2">
+                                    <a class="Brows" href="#">Browse<i class="fas fa-angle-down angle-down"></i></a>
+                                    <div class="drop2">
+                                        <div class="drop_flex">
+                                            <h3 class="drop_h3">Women</h3>
+                                            <ul class="drop_ul">
+                                                <li><a href="html/product.html" class="drop_a">Dresses</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Tops</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Sweaters/Knits</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Jackets/Coats</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Blazers</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Denim</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Leggings/Pants</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Skirts/Shorts</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Accessories </a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="drop_flex">
+                                            <h3 class="drop_h3">Men</h3>
+                                            <ul class="drop_ul">
+                                                <li><a href="html/product.html" class="drop_a">Tees/Tank tops</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Shirts/Polos</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Sweaters</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Sweatshirts/Hoodies</a>
+                                                </li>
+                                                <li><a href="html/product.html" class="drop_a">Blazers</a></li>
+                                                <li><a href="html/product.html" class="drop_a">Jackets/vests</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <input type="text" class="input_search" size="20" placeholder="Search for Item..." autofocus="">
+                        <button type="submit"><i class="fas fa-search Ssearch"></i></button>
+                    </form>
+                </div>
+                <div class="header_right">
+                    <ul class="header_cart_2">
+                        <li><a class="header_cart" href="#"></a></li>
+                    </ul>
+                    <a href="#" class="button_Account">My&nbsp;Account<i class="fas fa-angle-down angle-down"></i></a>
+                    <section class="header_cart">
+                        <div>
+                            <div class="cart_fon basketPanel">
+                                <table class="tableCart">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Имя</th>
+                                            <th>Цена</th>
+                                            <th>Количество</th>
+                                            <th></th>
+                                        </tr>
+                                    <tbody></tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th class="tableCartItogo1">Итого:</th>
+                                            <td class="tableCartItogo1">
+                                                <span class="total">0</span>
+                                                <i class="fas fa-ruble-sign"></i>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <div><a href="checkout.html"><span
+                                            class="cart_product_fon_button_1 cart_product_fon_button_1_position_1 cart_fon_3">Checkout</span></a>
+                                </div>
+                                <div><a href="Shopping_Cart.html"><span
+                                            class="cart_product_fon_button_1 cart_product_fon_button_1_position_2 cart_fon_3">Go&nbsp;to&nbsp;cart</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </header>
+            <nav class="center">
+                <ul class="menu">
+                    <li class="menu_list"><a href="index.html" class="menu_link menu_link_active">Home</a></li>
+                    <li class="menu_list">
+                        <a href="html/product.html" class="menu_link">Man</a>
+                        <div class="drop">
+                            <div class="drop_flex">
+                                <h3 class="drop_h3">Women</h3>
+                                <ul class="drop_ul">
+                                    <li><a href="html/product.html" class="drop_a">Dresses</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Tops</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Sweaters/Knits</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Jackets/Coats</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Blazers</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Denim</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Leggings/Pants</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Skirts/Shorts</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Accessories </a></li>
+                                </ul>
+                            </div>
+                            <div class="drop_flex">
+                                <h3 class="drop_h3">Women</h3>
+                                <ul class="drop_ul">
+                                    <li><a href="html/product.html" class="drop_a">Dresses</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Tops</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Sweaters/Knits</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Jackets/Coats</a></li>
+                                </ul>
+                                <h3 class="drop_h3">Women</h3>
+                                <ul class="drop_ul">
+                                    <li><a href="html/product.html" class="drop_a">Dresses</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Tops</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Sweaters/Knits</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Jackets/Coats</a></li>
+                                </ul>
+                            </div>
+                            <div class="drop_flex">
+                                <h3 class="drop_h3">Women</h3>
+                                <ul class="drop_ul">
+                                    <li><a href="html/product.html" class="drop_a">Dresses</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Tops</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Sweaters/Knits</a></li>
+                                    <li><a href="html/product.html" class="drop_a">Jackets/Coats</a></li>
+                                </ul>
+                                <img src="img/super-sale.png" alt="Акция" class="super-sale">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu_list"><a href="html/product.html" class="menu_link">Women</a></li>
+                    <li class="menu_list"><a href="html/product.html" class="menu_link">Kids</a></li>
+                    <li class="menu_list"><a href="html/product.html" class="menu_link">Accoseriese</a></li>
+                    <li class="menu_list"><a href="html/product.html" class="menu_link">Featured</a></li>
+                    <li class="menu_list"><a href="html/product.html" class="menu_link">Hot Deals </a></li>
+                </ul>
+            </nav>
+            <div class="promo center">
+                <div class="promo_text"><span class="promo_content_0"><span class="border-left"></span>THE BRAND</span>
+                    <span class="promo_content_1">OF
+                        LUXERIOUS</span> <span class="promo_content_2">FASHION</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="centerPage">
+            <div class="centerPage_left_1">
+                <a href="#" class="promo_01"><span class="promo_1">hOT dEAL</span><span class="promo_2">FOR
+                        MEN</span></a>
+            </div>
+            <div class="centerPage_left_2">
+                <a href="#" class="promo_02"><span class="promo_1">LUXIROUS &amp;&nbsp;trendy</span><span
+                        class="promo_2">ACCESORIES</span></a></div>
+        </div>
+        <div class="centerPage">
+            <div class="centerPage_right_1">
+                <a href="#" class="promo_01"><span class="promo_1">30% offer women </span> <span class="promo_2">FOR
+                        MEN</span></a></div>
+            <div class="centerPage_right_2">
+                <a href="#" class="promo_02"><span class="promo_1">new arrivals</span> <span class="promo_2">FOR
+                        kids</span></a></div>
+        </div>
+
+        <div class="center_text">
+            <p class="center_1">Fetured Items</p>
+            <p class="center_2">Shop for items based on&nbsp;what we&nbsp;featured in&nbsp;this week</p>
+        </div>
+
+        <section class="product-box center">
+            <div class="one">
+                <div class="product">
+                    <a href="html/product.html"><img class="product_img" src="img/catalog_1.png" alt="Товар 1"></a>
+                    <div class="product_content">
+                        <a href="html/product.html" class="product_name">Mango People T-shirt</a>
+                        <p class="product_price">$52.00</p>
+                    </div>
+                    <a href="#" class="product_add" data-price_2="52" data-name_2="Mango People T-shirt" data-id="1">
+                        <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                        Add to&nbsp;Cart</a>
+                </div>
+                <div class="product">
+                    <a href="html/product.html"><img class="product_img" src="img/catalog_2.png" alt="Товар 2"></a>
+                    <div class="product_content">
+                        <a href="html/product.html" class="product_name">Mango People T-shirt</a>
+                        <p class="product_price">$52.00</p>
+                    </div>
+                    <a href="#" class="product_add" data-price_2="52" data-name_2="Mango People T-shirt" data-id="2">
+                        <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                        Add to&nbsp;Cart</a>
+                </div>
+                <div class="product">
+                    <a href="html/product.html"><img class="product_img" src="img/catalog_3.png" alt="Товар 3"></a>
+                    <div class="product_content">
+                        <a href="html/product.html" class="product_name">Mango People T-shirt</a>
+                        <p class="product_price">$52.00</p>
+                    </div>
+                    <a href="#" class="product_add" data-price_2="52" data-name_2="Mango People T-shirt" data-id="3">
+                        <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                        Add to&nbsp;Cart</a>
+                </div>
+                <div class="product">
+                    <a href="html/product.html"><img class="product_img" src="img/catalog_4.png" alt="Товар 4"></a>
+                    <div class="product_content">
+                        <a href="html/product.html" class="product_name">Mango People T-shirt</a>
+                        <p class="product_price">$52.00</p>
+                    </div>
+                    <a href="#" class="product_add" data-price_2="52" data-name_2="Mango People T-shirt" data-id="4">
+                        <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                        Add to&nbsp;Cart</a>
+                </div>
+            </div>
+            <div class="two">
+                <div class="product">
+                    <a href="html/product.html"><img class="product_img" src="img/catalog_5.png" alt="Товар 5"></a>
+                    <div class="product_content">
+                        <a href="html/product.html" class="product_name">Mango People T-shirt</a>
+                        <p class="product_price">$52.00</p>
+                    </div>
+                    <a href="#" class="product_add" data-price_2="52" data-name_2="Mango People T-shirt" data-id="5">
+                        <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                        Add to&nbsp;Cart</a>
+                </div>
+                <div class="product">
+                    <a href="html/product.html"><img class="product_img" src="img/catalog_6.png" alt="Товар 6"></a>
+                    <div class="product_content">
+                        <a href="html/product.html" class="product_name">Mango People T-shirt</a>
+                        <p class="product_price">$52.00</p>
+                    </div>
+                    <a href="#" class="product_add" data-price_2="52" data-name_2="Mango People T-shirt" data-id="6">
+                        <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                        Add to&nbsp;Cart</a>
+                </div>
+                <div class="product">
+                    <a href="html/product.html"><img class="product_img" src="img/catalog_7.png" alt="Товар 7"></a>
+                    <div class="product_content">
+                        <a href="html/product.html" class="product_name">Mango People T-shirt</a>
+                        <p class="product_price">$52.00</p>
+                    </div>
+                    <a href="#" class="product_add" data-price_2="52" data-name_2="Mango People T-shirt" data-id="7">
+                        <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                        Add to&nbsp;Cart</a>
+                </div>
+                <div class="product">
+                    <a href="html/product.html"><img class="product_img" src="img/catalog_8.png" alt="Товар 8"></a>
+                    <div class="product_content">
+                        <a href="html/product.html" class="product_name">Mango People T-shirt</a>
+                        <p class="product_price">$52.00</p>
+                    </div>
+                    <a href="#" class="product_add" data-price_2="52" data-name_2="Mango People T-shirt" data-id="8">
+                        <img class="product_cart" src="img/cart_white.png" alt="Корзина">
+                        Add to&nbsp;Cart</a>
+                </div>
+            </div>
+        </section>
+
+        <div>
+            <a href="#" class="button_1">Browse All Product<i class="fas fa-angle-down angle-down"></i></a>
+        </div>
+        <div class="snow">
+            <div class="text_fon">
+                <span class="Procent">30%</span><span class="Offer">OFFER <br></span><span class="women">FOR
+                    WOMEN</span>
+                <div class="icon_fon_right">
+                    <img class="icon_1" src="img/icon_1.png" alt="Icon_1"><img class="icon_2" src="img/icon_2.png"
+                        alt="Icon_2"><img class="icon_3" src="img/icon_3.png" alt="Icon_3">
+                </div>
+            </div>
+            <article class="text_fon_right">
+                <h2 class="text">Free Delivery</h2>
+                <p class="text">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with
+                    extensive models.</p>
+                <h2 class="text text_2">Sales &amp;&nbsp;discounts</h2>
+                <p class="text">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with
+                    extensive models.</p>
+                <h2 class="text text_3">Quality assurance</h2>
+                <p class="text">Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with
+                    extensive models.</p>
+            </article>
+        </div>
+
+        <div class="subsscrib">
+            <figure>
+                <div class="subs_text">
+                    <img src="img/women_photo.png" alt="Avatar" class="ava">
+                    <p class="subtext">
+                        &laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi, a&nbsp;pulvinar purus
+                        condimentum&nbsp;a. Aliquam
+                        condimentum mattis neque sed pretium&raquo;
+                    </p>
+                    <span class="subtext_1">Bin Burhan</span> <span class="subtext_2"> Dhaka, Bd</span>
+                </div>
+            </figure>
+            <div class="submail">
+                <h2 class="sub_h"><span class="subtext_3">Subscribe</span> <span class="subtext_4">FOR OUR NEWLETTER AND
+                        PROMOTION</span></h2>
+                <input type="email" class="email_subscribe" size="20" placeholder="Enter Your Email" required
+                    pattern="\S+@[a-z]+.[a-z]+" name="Subscribe" id="1"><a href="#" class="button_Subs"><span
+                        class="by">Subscribe</span></a>
+            </div>
+        </div>
+
+        <div class="pred_footer">
+            <div class="pred_text">
+                <a class="logo logo_2" href="index.html"><img class="logo_img" src="img/logo.png" alt="logo"><span
+                        class="Log1">BRAN</span><span class="Log2">D</span></a>
+                <p class="pred_footer_1">
+                    Objectively transition extensive data rather than cross functional solutions. Monotonectally
+                    syndicate
+                    multidisciplinary materials before go&nbsp;forward benefits. Intrinsicly syndicate an&nbsp;expanded
+                    array of
+                    processes and cross-unit partnerships.</p>
+                <p class="pred_footer_2"> Efficiently plagiarize 24/365 action items and focused infomediaries.
+                    Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+                </p>
+                <p><span class="pred_foot pred_foot_1">COMPANY</span><span
+                        class="pred_foot pred_foot_2">INFORMATION</span><span class="pred_foot pred_foot_3">SHOP
+                        CATEGORY</span>
+                </p>
+                <nav>
+                    <ul class="pred_footer_3">
+                        <li class="footer_li"><a class="links_footer" href="index.html">Home</a></li>
+                        <li class="footer_li"><a class="links_footer" href="html/product.html">Shop</a></li>
+                        <li class="footer_li"><a class="links_footer" href="#">About</a></li>
+                        <li class="footer_li"><a class="links_footer" href="#">How It&nbsp;Works</a></li>
+                        <li class="footer_li"><a class="links_footer" href="#">Contact</a></li>
+                    </ul>
+                    <ul class="pred_footer_4">
+                        <li class="footer_li"><a class="links_footer" href="#">Tearms &amp;&nbsp;Condition</a></li>
+                        <li class="footer_li"><a class="links_footer" href="#">Privacy Policy</a></li>
+                        <li class="footer_li"><a class="links_footer" href="#">How to&nbsp;Buy</a></li>
+                        <li class="footer_li"><a class="links_footer" href="#">How to&nbsp;Sell</a></li>
+                        <li class="footer_li"><a class="links_footer" href="#">Promotion</a></li>
+                    </ul>
+                    <ul class="pred_footer_5">
+                        <li class="footer_li"><a class="links_footer" href="html/product.html">Men</a></li>
+                        <li class="footer_li"><a class="links_footer" href="html/product.html">Women</a></li>
+                        <li class="footer_li"><a class="links_footer" href="html/product.html">Child</a></li>
+                        <li class="footer_li"><a class="links_footer" href="html/product.html">Apparel</a></li>
+                        <li class="footer_li"><a class="links_footer" href="html/product.html">Brows All</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <span class="footer_text">&copy;&nbsp;2020 Brand All Rights Reserved.</span>
+            <div class="awesome_icon">
+                <a class="a_icon" href="#"><i class="fab fa-facebook-f font-awesome"></i></a>
+                <a class="a_icon" href="#"><i class="fab fa-twitter font-awesome"></i></a>
+                <a class="a_icon" href="#"><i class="fab fa-linkedin-in font-awesome"></i></a>
+                <a class="a_icon" href="#"><i class="fab fa-pinterest font-awesome"></i></a>
+                <a class="a_icon" href="#"><i class="fab fa-google-plus-g font-awesome"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/c02d82dd2f.js" crossorigin="anonymous"></script>
+    <script src="basket.js"></script>
 </body>
+
 </html>

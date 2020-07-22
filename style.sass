@@ -1,0 +1,920 @@
+@import 'vars'
+@import 'mixin'
+@import 'product'
+@import 'shopping_cart'
+@import 'checkout'
+@import 'animations'
+@import 'single_page'
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body 
+    font-family: 'Lato', sans-serif
+
+
+.wrapper 
+    min-height: 100vh
+    min-width: 1140px
+    margin-left: 230px
+    margin-right: 230px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    flex-direction: column
+
+.top 
+    flex-grow: 1
+    
+a 
+    text-decoration: none
+
+.center 
+    padding: 0 calc(50% - 570px)
+
+.header 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100px
+    background-color: $backColorHeader
+    border: $borderAtribute $colorBorder
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16)
+
+    &_left,
+    &_right 
+        display: flex
+        align-items: center
+
+    .header_form 
+        display: flex
+        align-items: center
+
+    .header_cart
+        position: relative 
+        width: 32px
+        height: 29px
+        right: 190px
+        margin-right: 26px
+        background-image: url(img/cart_black.png)
+
+        &:hover
+            background-image: url(img/cart_pink.png)
+    
+        &:hover .cart_fon
+            display: flex
+            
+
+    .header_search
+        display: flex
+        justify-content: space-between
+    
+    form
+        .header_form 
+        margin-left: -379px
+
+.cart_fon
+    display: none
+    flex-direction: column
+    position: absolute
+    width: 262px
+    background-color: #ffffff
+    border-radius: 5px
+    z-index: 1
+    margin-top: 30px
+
+.cart_product_fon
+    display: flex
+    justify-content: flex-start
+    height: 85px
+    width: 230px
+    padding-left: 15px
+    padding-right: 15px
+    margin-bottom: 10px
+
+.cart_img_fon
+    height: 85px
+    width: 72px
+    margin-top: 10px
+
+.position_text_3
+    display: flex
+    flex-direction: column
+    margin-left: 50px
+
+.cart_text_fon_1
+    font-size: 12px
+    font-weight: bold
+    color: #222222
+    text-transform: uppercase
+
+span.cart_fon_2
+    font-size: 13px
+    color: #e4af48
+    line-height: 20px
+
+.cart_text_fon_3
+    font-size: 12px
+    color: #f16d7f
+    text-transform: uppercase
+
+.cart_product_text_position_h_1
+    margin-left: -35px
+    margin-top: 15px
+
+.cart_product_text_position_h_2
+    margin-left: 65px
+    margin-top: -38px
+    display: flex
+
+h3.cart_product_h3
+    display: flex
+    justify-content: space-around
+    margin-top: 19px
+
+.cart_product_fon_button_1
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 50px
+    width: 225px
+    background-color: #fff
+    border: 1px solid #eaeaea
+
+.cart_product_fon_button_1:hover
+    border: 1px solid #f16d7f
+
+.cart_product_fon_button_1_position_1
+    margin-top: 32px
+    margin-bottom: 11px
+    margin-left: 20px
+
+.cart_product_fon_button_1_position_2
+    margin-left: 20px
+    margin-bottom: 20px
+
+.cart_fon_3
+    font-size: 14px
+    font-weight: bold
+    color: #4a4a4a
+    text-transform: uppercase
+
+.cart_fon_3:hover
+    color: #f16d7f
+
+.borders_cart_2
+    height: 1px
+    width: 229px
+    background-color: #ededed
+    margin-top: 16px
+    margin-bottom: 16px
+    margin-left: 17px
+
+.logo 
+    display: flex
+    align-items: center
+    margin-right: 46px
+
+span.Log1 
+    font-size: 27px
+    font-weight: 300
+    color: $colorLinkandText
+    text-align: center
+    letter-spacing: 0.03em
+    line-height: 32px
+    text-transform: uppercase
+
+span.Log2 
+    font-size: 27px
+    font-weight: 900
+    color: $colorDisainer
+    text-align: center
+    letter-spacing: 0.03em
+    line-height: 32px
+    text-transform: uppercase
+
+.input_search
+    padding-left: 15px
+    padding-right: 15px
+    height: 38px
+    width: 317px
+    background-color: $backColorHeader
+    border: $borderAtribute #5e4545
+    border-radius: 0px 3px 3px 0px
+
+.Brows
+    border: $borderAtribute $colorBorder
+    height: 38px
+    width: 87px
+    border-radius: 3px 0px 0px 3px
+    padding: 9px
+    background-color: $colorBorder
+    margin-left: 57px
+
+a.Brows
+    display: flex
+    justify-content: center
+    font-size: 14px
+    font-weight: 300
+    color: $colorLinkandText
+    text-align: right
+    letter-spacing: 0.03em
+
+.angle-down
+    margin-left: 8px
+    margin-top: 4px
+
+.Ssearch
+    font-size: 14px
+    color: #a4a4a4
+    text-align: right
+    letter-spacing: 0.03em
+    line-height: 32px
+    padding: 10px
+    background-color: white
+    transition: all .9s
+
+.Ssearch:hover
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $colorDisainer
+    transform: rotate(360deg)
+    border: 1px solid #e6e6e6
+
+.logo_img 
+    margin-right: 13px
+
+.button_Account
+    display: flex
+    justify-content: center
+    align-items: center
+    border: $borderAtribute $colorDisainer
+    background-color: $colorDisainer
+    height: 38px
+    width: 130px
+    color: white
+    transition: all 0.3s
+
+.button_Account:hover
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16)
+    background-color: white
+    color: $colorDisainer 
+
+.menu 
+    list-style-type: none
+    +d-center()
+
+.menu_list
+    position: relative
+
+.menu_list:hover .drop
+    display: flex
+
+.menu_list2
+    position: relative
+
+.menu2 .menu_list2:hover .drop2
+    display: flex
+    flex-direction: column
+
+.menu_link 
+    font-size: 14px
+    font-weight: 800
+    color: $colorLinkandText
+    text-transform: uppercase
+    padding: 20px
+    display: block
+
+.menu_link_active 
+    border-bottom: 3px solid $colorDisainer
+    padding-bottom: 18px
+
+.menu_link:hover
+    border-bottom: 3px solid $colorDisainer
+    padding-bottom: 18px
+
+.drop
+    background-color: $backColorHeader
+    border-radius: 5px
+    padding: 12px 20px
+    position: absolute
+    display: none
+    z-index: 1;
+
+.drop_last 
+    right: 0
+
+
+.drop_flex:not(:last-child) 
+    margin-right: 46px
+
+
+.drop_ul 
+    list-style-type: none
+
+
+.drop_h3 
+    width: 234px
+    border-bottom: $borderAtribute #e8e8e8
+    font-size: 14px
+    color: #232323
+    letter-spacing: 0.03em
+    padding: 8px 0
+    margin-bottom: 8px
+    text-transform: uppercase
+
+
+.drop_a 
+    font-size: 14px
+    color: #646464
+    text-align: right
+    letter-spacing: 0.03em
+    line-height: 28px
+
+
+.drop_a:hover 
+    color: $colorDisainer
+
+.drop2
+    display: none
+    background-color: $backColorHeader
+    border-radius: 5px
+    padding: 12px 15px
+    position: absolute
+    left: 50px
+    z-index: 1
+
+.super-sale
+    position: absolute
+    width: 255px
+    height: 118px
+    right: 18px
+    bottom: 18px
+
+.promo 
+    background-color: #e8e8e8
+    height: 613px
+    background-image: url(img/promo.png)
+    background-position: center -51px
+    background-repeat: no-repeat
+    position: relative
+
+.border-left 
+    height: 95px
+    width: 12px
+    background-color: $colorDisainer
+    position: absolute
+    left: 210px
+    top: 239px
+
+.promo_text
+    width: 485px
+    padding-top: 224px
+
+.promo_content_0
+    font-size: 60px
+    font-weight: 900
+    color: $colorLinkandText
+    text-align: right
+    letter-spacing: 0.03em
+
+.promo_content_1
+    font-size: 40px
+    font-weight: 900
+    color: $colorLinkandText
+    text-align: right
+    letter-spacing: 0.03em
+
+.promo_content_2
+    font-size: 40px
+    font-weight: 900
+    color: $colorDisainer
+    text-align: right
+    letter-spacing: 0.03em
+
+    
+.centerPage
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.centerPage_left_1
+    width: 560px
+    height: 542px
+    margin-left: 230px
+    margin-top: 98px
+    background-image: url(img/photo_for_man.png)
+
+.centerPage_left_2
+    width: 560px
+    height: 261px
+    margin-left: 230px
+    margin-top: 20px
+    background-image: url(img/wallet.png) 
+
+.centerPage_right_1
+    display: inline-flex
+    width: 560px
+    height: 261px
+    margin-left: 811px
+    margin-top: -823px
+    background-image: url(img/women.png)
+
+.centerPage_right_2
+    display: inline-flex
+    width: 560px
+    height: 542px
+    margin-left: 811px
+    margin-top: 20px
+    background-image: url(img/kid.png)
+    
+
+a.promo_01
+    display: flex
+    width: 175px
+    height: 82px
+    margin-top: 26px
+    background-color: white
+
+a.promo_02
+    display: flex
+    width: 225px
+    height: 82px
+    margin-top: 26px
+    background-color: white
+
+span.promo_1 
+    display: grid
+    align-items: center
+    padding-left: 16px
+    font-size: 18px
+    font-weight: 900
+    color: $colorLinkandText
+    letter-spacing: 0.03em
+    text-transform: uppercase
+
+span.promo_2
+    font-size: 30px
+    font-weight: 900
+    color: $colorDisainer
+    letter-spacing: 0.03em
+    text-transform: uppercase
+
+p.center_1 
+    font-size: 30px
+    font-weight: bold
+    color: $colorLinkandText
+    text-align: center
+    letter-spacing: 0.03em
+    line-height: 54px
+    margin-top: 100px
+
+p.center_2
+    font-size: 14px
+    color: #9f9f9f
+    text-align: center
+    letter-spacing: 0.03em
+    line-height: 54px
+
+.product-box 
+    padding-top: 50px
+    padding-bottom: 50px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+
+.product 
+    width: 263px
+    position: relative
+    margin-bottom: 46px
+    transition: all .2s
+
+
+.product:hover 
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16)
+    transform: scale(1.03)
+
+
+.product:hover .product_img 
+    filter: brightness(40%)
+
+
+.product:hover .product_add 
+    display: flex
+
+.product_add 
+    position: absolute
+    top: 97px
+    left: 70px
+    display: none
+    justify-content: center
+    align-items: center
+    height: 39px
+    width: 123px
+    border: $borderAtribute $backColorHeader
+    font-size: 13px
+    font-weight: bold
+    color: $backColorHeader
+
+
+.product_add:hover 
+    box-shadow: 0px 0px 5px 0px white
+
+
+.product_img 
+    width: 100%
+
+
+.product_content 
+    padding: 19px 15px
+
+
+.product_name 
+    font-size: 13px
+    color: $colorLinkandText
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+
+.product_name:hover
+    color: $colorDisainer
+
+
+.product_price 
+    font-size: 16px
+    font-weight: bold
+    color: $colorDisainer
+    text-transform: uppercase
+    margin-top: 16px
+
+.product_cart 
+    margin-right: 8px
+
+.button_1
+        +d-center() 
+        border: $borderAtribute $colorDisainer
+        background-color: $colorDisainer
+        height: 48px
+        width: 212px
+        color: white
+        margin-left: 50%
+        margin-bottom: 113px
+
+.button_1:hover 
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16)
+    background-color: white
+    color: $colorDisainer 
+
+.snow
+    height: 529px
+    width: 1140px
+    background-color: black
+    margin-left: 229px
+    margin-right: 231px
+    background-image: url(img/snow_effect.png), url(img/women_snow.webp)
+    background-repeat: no-repeat
+
+.text_fon
+    width: 293px
+    height: 78px
+    padding-top: 146px
+    padding-left: 39px
+
+.Procent
+    font-size: 54px
+    font-weight: bold
+    color: $backColorHeader
+    letter-spacing: 0.03em
+
+.Offer
+    font-size: 54px
+    font-weight: bold
+    color: $colorDisainer
+    letter-spacing: 0.03em
+
+.women
+    font-size: 32px
+    font-weight: bold
+    color: $backColorHeader
+    letter-spacing: 0.03em
+    -webkit-transform: scale(0.89)
+    -ms-transform: scale(0.89)
+    transform: scale(0.89)
+
+.icon_fon_right
+    display: flex
+    flex-direction: column
+    width: 373px
+    height: 529px    
+
+.icon_1
+    width: 45px
+    height: 32px
+    margin-left: 803px
+    margin-top: -55%
+
+.icon_2
+    width: 40px
+    height: 40px
+    margin-left: 803px
+    margin-top: 124px
+
+.icon_3
+    width: 47px
+    height: 35px
+    margin-left: 803px
+    margin-top: 114px
+
+.text_fon_right
+    display: flex
+    flex-direction: column
+    margin-left: 925px
+    margin-top: -105px
+    height: 20px
+
+h2.text 
+    +d-center()
+    font-size: 20px
+    font-weight: bold
+    color: #fbfbfb
+    letter-spacing: 0.03em
+
+.text_2
+    margin-top: 27px
+
+.text_3
+    margin-top: 20px
+
+p.text 
+    height: 93px
+    width: 236px
+    font-size: 14px
+    font-weight: 300
+    color: #fbfbfb
+    letter-spacing: 0.03em
+    line-height: 24px
+    margin-top: 17px
+    padding-right: 32px
+
+.subsscrib
+    height: 438px
+    background-image: url(img/subs-effect.png), url(img/fons.png)
+    background-size: cover
+    background-position: bottom
+    background-color: $backColorFooter
+    margin-top: 97px
+    margin-bottom: 109px
+
+.subs_text
+    width: 1048px
+    height: 171px
+
+img.ava
+    margin-left: 230px
+    margin-top: 111px
+    width: 83px
+    height: 83px
+
+p.subtext 
+    margin-left: 341px
+    margin-top: -69px
+    height: 197px
+    width: 426px
+    font-size: 16px
+    font-style: italic
+    color: $colorSubText
+    letter-spacing: 0.03em
+    line-height: 26px
+    
+.subtext_1
+    display: flex
+    flex-direction: column
+    margin-left: 343px
+    margin-top: -117px
+    font-size: 16px
+    font-weight: bold
+    color: $colorDisainer
+    letter-spacing: 0.03em
+    line-height: 26px
+
+.subtext_2
+    margin-left: 343px
+    font-size: 12px
+    font-weight: 500
+    color: $colorSubText
+    letter-spacing: 0.03em
+    line-height: 14px
+
+.submail
+    position: relative
+
+h2.sub_h 
+    display: flex
+    flex-direction: column
+    width: 277px
+    margin-left: 946px
+    margin-top: -49px
+    margin-bottom: 35px
+
+.subtext_3
+    font-size: 24px
+    color: $colorSubText
+    text-align: center
+    line-height: 54px
+    text-transform: uppercase
+
+.subtext_4
+    font-size: 14px
+    color: $colorSubText
+    text-align: center
+    letter-spacing: 0.01em
+    line-height: 24px
+
+.email_subscribe
+    margin-left: 892px
+    padding-left: 28px
+    padding-right: 120px
+    height: 46px
+    width: 385px
+    background-color: #e1e1e1
+    border-radius: 23px
+
+input:focus
+    outline: none
+
+details:focus
+    outline: none
+
+summary:focus
+    outline: none
+
+.button_Subs
+    position: absolute
+    left: 1186px
+    height: 46px
+    width: 104px
+    background-color: $colorDisainer
+    border-radius: 0px 23px 23px 0px
+
+.by
+    font-size: 14px
+    color: $backColorHeader
+    letter-spacing: 0.03em
+    line-height: 45px
+    display: flex
+    justify-content: center
+    border-radius: inherit
+
+.by:hover
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16)
+
+.pred_footer
+    height: 349px
+
+.logo_2
+    margin-left: 228px
+
+.pred_text
+    position: relative
+
+p.pred_footer_1 
+    margin-left: 228px
+    margin-top: 29px
+    height: 204px
+    width: 430px
+    font-size: 14px
+    font-weight: 300
+    color: $colorPredFooter
+    letter-spacing: 0.03em
+    line-height: 24px
+
+p.pred_footer_2
+    margin-left: 228px
+    margin-top: -83px
+    height: 204px
+    width: 430px
+    font-size: 14px
+    font-weight: 300
+    color: $colorPredFooter
+    letter-spacing: 0.03em
+    line-height: 24px
+
+.pred_foot
+    position: absolute
+    top: 23px
+    font-size: 18px
+    font-weight: bold
+    color: $colorDisainer
+    letter-spacing: 0.03em
+    line-height: 26px
+
+.pred_foot_1
+    margin-left: 719px
+
+.pred_foot_2
+    margin-left: 950px
+    
+.pred_foot_3
+    margin-left: 1173px
+
+p.pred_footer_3
+    display: flex
+    flex-direction: column
+    margin-left: 720px
+    margin-top: -327px
+    justify-content: stretch
+    height: 179px
+    width: 101px
+    width: 101px
+    height: 179px
+    font-family: 'Lato'
+    font-size: 14px
+    font-weight: 300
+    color: $colorPredFooter
+    letter-spacing: 0.03em
+    line-height: 24px
+
+ul.pred_footer_3
+    display: flex
+    flex-direction: column
+    margin-top: -335px
+    margin-left: 720px
+
+ul.pred_footer_4
+    display: flex
+    flex-direction: column
+    margin-top: -340px
+    margin-left: 951px
+
+
+ul.pred_footer_5
+    display: flex
+    flex-direction: column
+    margin-top: -336px
+    margin-left: 1170px
+
+a.links_footer 
+    font-size: 16px
+    color: $colorPredFooter
+    text-align: right
+    letter-spacing: 0.03em
+    line-height: 42px
+
+a.links_footer:hover
+    color: $colorDisainer
+    animation: text-shadow-drop-center 1.5s ease-out infinite alternate both
+
+ul 
+    list-style: none
+    
+.footer_li
+    padding-bottom: 25px
+
+.footer 
+    background-color: $backColorFooter
+    font-size: 16px
+    color: #7a7a7a
+    letter-spacing: 0.03em
+    line-height: 42px
+    display: flex
+    align-items: center
+    height: 79px
+    margin-top: 65px
+
+span.footer_text 
+    margin-left: 228px
+
+.awesome_icon 
+    display: flex
+    margin-left: 690px
+    width: 191px
+    justify-content: space-around
+
+.font-awesome
+    display: flex
+    font-size: 14px
+    color: #b2b2b2
+    text-align: center
+    width: 32px
+    height: 32px
+    padding-top: 25%
+    background-color: white
+
+.font-awesome:hover
+    color: white
+    font-size: 18px
+    background-color: $colorDisainer
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16)
+
+
+
+
+
+
+
+
+
+
