@@ -1,9 +1,10 @@
 body{
     font-family: 'SF Pro Display', sans-serif;
+    background-color: azure;
 }
 header{
     display: flex;
-    background-color: #2f2a2d;
+    background-color: #1a7cec;
     justify-content: space-between;
     color: #fafafa;
     padding: 30px 80px;
@@ -16,6 +17,24 @@ button{
     text-transform: uppercase;
     font-weight: bold;
 }
+
+p.product-quantity {
+    margin: 4px 0px 4px -4px;
+    padding: 4px;
+}
+
+p.product-price {
+    margin: 4px 0px 4px -4px;
+    padding: 4px;
+}
+
+.product-item-desc {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
 .btn-cart{
     background-color: #fafafa;
     padding: 10px 20px;
@@ -32,6 +51,7 @@ button{
 }
 .btn-cart, .logo{
     align-self: center;
+    margin-left: 305px;
 }
 .products{
     column-gap: 30px;
@@ -39,7 +59,7 @@ button{
     grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: 1fr;
     padding: 40px 80px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 p {
     margin: 0 0 5px 0;
@@ -75,3 +95,47 @@ img {
     border-color: #2f2a2d;
     color: #2f2a2d;
 }
+
+
+.cart {
+    position: relative;
+ }
+ 
+ .cart-drop {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 400px;
+    position: absolute;
+    top: 49px;
+    left: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 14px;
+    z-index: 5;
+}
+ 
+ .cart-drop:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -8px;
+    left: 35px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+ }
+
+ .cart-item-text {
+    display: grid;
+}
+
+
+ .cart-body {
+     color: black;
+ }
+ 
+ .invisible {
+    display: none;
+ }
