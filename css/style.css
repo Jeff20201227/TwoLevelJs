@@ -1,14 +1,15 @@
 body{
     font-family: 'SF Pro Display', sans-serif;
+    background-color: azure;
 }
 header{
     display: flex;
-    background-color: #2f2a2d;
+    background-color: #1a7cec;
     justify-content: space-between;
     color: #fafafa;
     padding: 30px 80px;
 }
-button:focus{
+button{
     outline: none;
 }
 .logo{
@@ -16,6 +17,27 @@ button:focus{
     text-transform: uppercase;
     font-weight: bold;
 }
+
+p.product-quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    padding: 4px;
+    text-align: center;
+}
+
+p.product-price {
+    margin: 4px 0px 4px -4px;
+    padding: 4px;
+}
+
+.product-item-desc {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
 .btn-cart{
     background-color: #fafafa;
     padding: 10px 20px;
@@ -32,20 +54,15 @@ button:focus{
 }
 .btn-cart, .logo{
     align-self: center;
+    margin-left: 305px;
 }
-/*.products {*/
-/*display: flex;*/
-/*justify-content: space-between;*/
-/*flex-wrap: wrap;*/
-/*padding: 40px 80px;*/
-/*}*/
 .products{
     column-gap: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: 1fr;
     padding: 40px 80px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 p {
     margin: 0 0 5px 0;
@@ -58,6 +75,25 @@ p {
     overflow: hidden;
     margin: 20px 0;
 }
+
+.product-bio {
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+
+.product-bio img {
+    min-width: 80px;
+    height: 100px;
+}
+
+.product-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 90px;
+}
+
 img {
     max-width: 100%;
     height: auto
@@ -66,82 +102,78 @@ img {
     border: 1px solid #c0c0c040;
     padding: 15px
 }
-.cart{
-    position: relative;
-}
-.cart-block{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.62);
-    border-radius: 5px;
-    box-sizing: border-box;
-    right: 0;
-    top: 130%;
-    position: absolute;
-    background-color: white;
-    padding: 20px;
-    color: black;
-    width: 300px;
-}
-
-.invisible{
-    display: none;
-}
-.cart-block:before{
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: -10px;
-    right: 35px;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid white;
-}
-
-.buy-btn, .del-btn{
+.buy-btn{
     margin-top: 5px;
     background-color: #2f2a2d;
-    padding: 5px 15px;
+    padding: 10px 20px;
     border: 1px solid transparent;
     color: #fafafa;
     border-radius: 5px;
     transition: all ease-in-out .4s;
     cursor: pointer;
 }
-.buy-btn:hover, .del-btn:hover{
-    background-color: #fafafa;
+.buy-btn:hover{
+    background-color: transparent;
+    border-color: #2f2a2d;
     color: #2f2a2d;
-    border: 1px solid #2f2a2d;
 }
-.cart-item {
+
+
+.cart {
+    position: relative;
+ }
+
+ .cart-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border: 2px solid azure;
 }
-.cart-item:not(:last-child){
-    margin-bottom: 20px;
-}
-.product-bio{
+ 
+ .cart-drop {
     display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 400px;
+    position: absolute;
+    top: 49px;
+    left: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 14px;
+    z-index: 5;
 }
-.cart-item img{
-    align-self: flex-start;
-    margin-right: 15px;
-}
-.product-single-price{
-    color: #474747;
-    font-size: 0.5em;
-}
-.product-price{
-    margin-left: 30px;
-}
-.product-desc{
-    max-width: 150px;
-}
-.product-quantity {
+ 
+ .cart-drop:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -8px;
+    left: 35px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+ }
+
+ .cart-block {
+    display: flex;
+    flex-direction: column;
+    background-color: violet;
+    border: 4px solid black;
     margin-top: 15px;
-    font-size: 0.75em;
+    text-align: center
 }
-.right-block{
-    text-align: right;
+ .invisible {
+    display: none;
+ }
+ .right-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .btn-search {
     background-color: transparent;
@@ -154,7 +186,7 @@ img {
 }
 .search-form{
     position: relative;
-    margin-right: 50px;
+    margin-right: -125px;
     display: inline-block;
 }
 .search-field:focus{

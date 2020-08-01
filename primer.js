@@ -14,15 +14,14 @@ const app = new Vue({
     imgCart: 'https://placehold.it/50x100',
   },
   methods: {
-    getJson(url){       //получаем данные о товаре из API
+    getJson(url){
       return fetch(url)
           .then(result => result.json())
           .catch(error => {
             console.log(error);
           })
     },
-    addProduct(product) {     //Добавляем продукт в корзину, в случае если товара нет(проверка по id) добавляем строчки о продукте, имени продукта, цене за продукт, плюс его количество: 1.
-                              //В случае если такой товар уже есть добавляем +1 товар.
+    addProduct(product) {
       const indexOfCart = this._getIndexOfCart(product);
       if ( indexOfCart === -1){
           this.cart.push({id: product.id_product, name: product.product_name, price: product.price, quantity: 1});
@@ -31,7 +30,7 @@ const app = new Vue({
       }
     },
 
-    _getIndexOfCart(product){  //метод проверяет какой товар добавляем в корзину.
+    _getIndexOfCart(product){
       for (let i = 0; i < this.cart.length; i++){
         if (this.cart[i].id === product.id_product){
           return i;
@@ -40,7 +39,7 @@ const app = new Vue({
       return -1;
     },
 
-    getTotalPrice(){   //метод для подсчёта итоговой цены (цена * количество)
+    getTotalPrice(){
       let totalPrice = 0;
       for (let product of this.cart){
         totalPrice += product.price * product.quantity;
@@ -48,11 +47,11 @@ const app = new Vue({
       return totalPrice;
     },
 
-    removeProductOfCart(product){  //метод для удаления товара из корзины
+    removeProductOfCart(product){
       this.cart.splice(this.cart.indexOf(product), 1);
     },
 
-    filterGoods(product){ //метод показывающий какой товар надо показать после поиска
+    filterGoods(product){
       return (new RegExp(this.searchLine, "i")).test(product.product_name);
     }
   },
@@ -86,4 +85,3 @@ const app = new Vue({
 
   },
 });
-
