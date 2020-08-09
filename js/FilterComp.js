@@ -1,7 +1,13 @@
-Vue.component('filter-el', {
+Vue.component('search', {
     data(){
         return {
             userSearch: ''
+        }
+    },
+    methods: {
+        filter(value){
+            let regexp = new RegExp(value, 'i');
+            this.filtered = this.products.filter(el => regexp.test(el.product_name));
         }
     },
     template: `
